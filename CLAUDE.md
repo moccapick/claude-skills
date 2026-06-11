@@ -180,6 +180,22 @@ See domain-specific roadmaps in each skill folder's README.md or roadmap files.
 - **Implementation Plans:** [documentation/implementation/](documentation/implementation/)
 - **Sprint Delivery:** [documentation/delivery/](documentation/delivery/)
 
+## Agent skills
+
+Configuration for the installed [mattpocock/skills](https://github.com/mattpocock/skills) package (under `.claude/skills/`). The engineering skills (`to-issues`, `to-prd`, `triage`, `qa`, `diagnose`, `tdd`, `improve-codebase-architecture`, `zoom-out`) read these settings.
+
+### Issue tracker
+
+Issues and PRDs live as local markdown under `.scratch/<feature-slug>/`. See `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Five canonical roles, label strings equal to their names (`needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`, `wontfix`). See `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+Multi-context: one `CONTEXT.md` per domain folder (created lazily by `/grill-with-docs`), indexed by a root `CONTEXT-MAP.md`; system-wide ADRs in `docs/adr/`. See `docs/agents/domain.md`.
+
 ---
 
 **Last Updated:** February 2026
