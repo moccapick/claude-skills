@@ -134,4 +134,4 @@ Eksempel: `Selected Femme Bukse Vide Sort – Høyt liv`
 - Eksakte cm-/kg-grenser for postkasselevering (bekreftes hos mybring).
 - Er Bring-appen tilgjengelig på Shopify-planen (avgjør Alt. A vs. B)?
 - Faktisk snittordreverdi (justerer fri-frakt-terskel).
-- Kobling mot g9-feed: hvor bor feeden/skillen? (Ikke funnet i dette repoet – trengs for evt. berikelsesverktøy.)
+- Kobling mot produktfeeden (berikelse av vekt/mål/kategori/tittel før publisering).
