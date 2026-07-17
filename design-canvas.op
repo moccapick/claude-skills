@@ -1,0 +1,16 @@
+{
+  "version": "0.8.1",
+  "name": "OpenPencil CLI Session",
+  "children": [
+    {
+      "type": "frame",
+      "id": "n1",
+      "name": "Hello from Claude",
+      "x": 0.0,
+      "y": 0.0,
+      "width": 400.0,
+      "height": 200.0,
+      "children": []
+    }
+  ]
+}
