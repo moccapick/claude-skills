@@ -10,6 +10,7 @@ Complete installation guide for all 53 production-ready skills across multiple A
 - [OpenAI Codex Installation](#openai-codex-installation)
 - [Per-Skill Installation](#per-skill-installation)
 - [Multi-Agent Setup](#multi-agent-setup)
+- [OpenPencil Integration (Design Canvas MCP)](#openpencil-integration-design-canvas-mcp)
 - [Manual Installation](#manual-installation)
 - [Verification & Testing](#verification--testing)
 - [Troubleshooting](#troubleshooting)
@@ -341,6 +342,44 @@ npx agent-skills-cli add alirezarezvani/claude-skills/engineering-team --agent c
 # Same suite to Cursor
 npx agent-skills-cli add alirezarezvani/claude-skills/engineering-team --agent cursor
 ```
+
+---
+
+## OpenPencil Integration (Design Canvas MCP)
+
+[OpenPencil](https://github.com/ZSeven-W/openpencil) is an open-source AI-native vector design tool: type a prompt and a real UI appears on a live canvas. This repository ships a project-level `.mcp.json` that connects Claude Code to OpenPencil's built-in MCP server automatically.
+
+### Step 1: Install the Desktop App
+
+```bash
+# macOS
+brew tap zseven-w/openpencil
+brew install --cask openpencil
+
+# Windows
+scoop bucket add openpencil https://github.com/zseven-w/scoop-openpencil
+scoop install openpencil
+
+# Linux: download .AppImage or .deb from
+# https://github.com/ZSeven-W/openpencil/releases
+```
+
+### Step 2: Install the Agent Skill (Optional but Recommended)
+
+```bash
+# Install the op CLI
+brew install zseven-w/openpencil/op
+# or: curl -fsSL https://raw.githubusercontent.com/ZSeven-W/openpencil/main/scripts/install-op.sh | bash
+
+# Install the openpencil-skill into Claude Code
+op install --target claude
+```
+
+### Step 3: Connect
+
+Start the live canvas (`op start`, or open the desktop app), then open this repository in Claude Code. The project `.mcp.json` points at OpenPencil's MCP server (`http://127.0.0.1:3100/mcp`) — approve the server when prompted and prompt away.
+
+If you run OpenPencil on a non-default port (`op start --port <n>`), update the URL in `.mcp.json` to match.
 
 ---
 
